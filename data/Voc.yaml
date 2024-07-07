@@ -1,0 +1,29 @@
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC/
+# Train command: python train.py --data voc.yaml
+# Default dataset location is next to /yolov5:
+#   /parent_folder
+#     /VOC
+#     /yolov5
+
+
+# download command/URL (optional)
+#download: bash data/scripts/get_voc.sh
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: VOCdevkit-HRRSD-hrrsd/images/train  # 16551 images
+val: VOCdevkit-HRRSD-hrrsd/images/val  # 4952 images
+test: VOCdevkit-HRRSD-hrrsd/images/test
+# number of classes
+nc: 20
+
+# class names
+#names: ['ship', 'bridge', 'ground track field', 'storage tank', 'basketball court', 'tennis court', 'airplane', 'baseball diamond',
+#         'harbor', 'vehicle', 'crossroad', 'T junction', 'parking lot']
+
+#names: ['aircraft','oiltank','playground','overpass']
+
+# names: ['car','truck','van','long vehicle','bus','airliner','propeller aircraft','trainer aircraft','chartered aircraft','fighter aircraft','others',
+#         'stair truck','pushback truck','helicopter','boat']
+names: ['ship', 'airplane', 'airport', 'basketballcourt', 'baseballfield', 'bridge', 'chimney', 'dam',
+        'Expressway-Service-area', 'groundtrackfield', 'harbor', 'golffield', 'Expressway-toll-station',
+        'overpass', 'stadium', 'storagetank', 'tenniscourt', 'trainstation', 'vehicle', 'windmill']
